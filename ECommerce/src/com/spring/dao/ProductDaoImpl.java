@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.spring.model.Product;
+import com.spring.model.SaleInfo;
 import com.spring.service.ProductService;
 @Repository
 public class ProductDaoImpl implements ProductDao {
@@ -51,6 +52,13 @@ public class ProductDaoImpl implements ProductDao {
 		Session currentSession = sessionFactory.getCurrentSession();
 		Query query = currentSession.createQuery("select prodcutName from product where id=:id");
 		return null;
+	}
+	@Override
+	@Transactional
+	public void saleProduct(SaleInfo saleInfo) {
+		Session currentSession = sessionFactory.getCurrentSession();
+		currentSession.saveOrUpdate(saleInfo);
+		
 	}
 
 }

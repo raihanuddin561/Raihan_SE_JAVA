@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import com.spring.model.Product;
+import com.spring.model.SaleInfo;
 
 public interface ProductService {
 
@@ -17,5 +18,7 @@ public interface ProductService {
 	void deleteProduct(int id);
 
 	String getMostSoldProduct();
+
+	void saleProduct( SaleInfo saleInfo);
 
 }

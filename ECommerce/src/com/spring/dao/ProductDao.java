@@ -3,6 +3,7 @@ package com.spring.dao;
 import java.util.List;
 
 import com.spring.model.Product;
+import com.spring.model.SaleInfo;
 
 public interface ProductDao {
 
@@ -15,5 +16,7 @@ public interface ProductDao {
 	void deleteProduct(int id);
 
 	String getMostSoldProduct();
+
+	void saleProduct(SaleInfo saleInfo);
 
 }

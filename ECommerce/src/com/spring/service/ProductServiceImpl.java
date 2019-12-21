@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.dao.ProductDao;
 import com.spring.model.Product;
+import com.spring.model.SaleInfo;
 
 @Service("productService")
 public class ProductServiceImpl implements ProductService {
@@ -36,6 +37,11 @@ public class ProductServiceImpl implements ProductService {
 	public String getMostSoldProduct() {
 		// TODO Auto-generated method stub
 		return productDao.getMostSoldProduct();
+	}
+	@Override
+	public void saleProduct(SaleInfo saleInfo) {
+		productDao.saleProduct(saleInfo);
+		
 	}
 
 }

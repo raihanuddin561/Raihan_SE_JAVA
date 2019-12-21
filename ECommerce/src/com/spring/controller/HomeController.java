@@ -23,7 +23,7 @@ public class HomeController {
 	
 	@RequestMapping("/dashboard")
 	public String dashboard() {
-		String mostSoldProduct = productService.getMostSoldProduct();
+		//String mostSoldProduct = productService.getMostSoldProduct();
 		return "dashboard";
 	}
 }

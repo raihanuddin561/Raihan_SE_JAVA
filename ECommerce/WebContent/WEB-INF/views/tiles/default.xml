@@ -83,5 +83,15 @@
 		<put-attribute name="content"
 			value="/WEB-INF/views/pages/deletesuccess.jsp" />
 	</definition>
-
+<definition name="saleProduct" extends="base-definition">
+		<put-attribute name="title" value="Deleted" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/pages/saleProduct.jsp" />
+	</definition>
+	
+	<definition name="productSold" extends="base-definition">
+		<put-attribute name="title" value="Sold" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/pages/productSold.jsp" />
+	</definition>
 </tiles-definitions>

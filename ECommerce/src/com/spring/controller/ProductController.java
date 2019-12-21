@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring.model.Product;
+import com.spring.model.SaleInfo;
 import com.spring.service.ProductService;
 
 @Controller
@@ -55,5 +56,22 @@ public class ProductController {
 		 productService.deleteProduct(id);
 		
 		return "deletesuccess";
+	}
+	
+	@RequestMapping("/saleProduct")
+	public String saleProduct(Model model, @Valid SaleInfo saleInfo,BindingResult result) {
+		if(result.hasErrors()) {
+			model.addAttribute("saleInfo",saleInfo);
+			return "saleProduct";
+		}else {
+			if(saleInfo.getSaleQuantity()>0 ) {
+				productService.saleProduct(saleInfo);
+				return "productSold";
+			}else {
+				model.addAttribute("saleInfo",saleInfo);
+				return "saleProduct";
+			}
+		}
+		
 	}
 }
