@@ -48,10 +48,12 @@ public class ProductDaoImpl implements ProductDao {
 		
 	}
 	@Override
-	public String getMostSoldProduct() {
+	@Transactional
+	public List<SaleInfo> getMostSoldProduct() {
 		Session currentSession = sessionFactory.getCurrentSession();
-		Query query = currentSession.createQuery("select prodcutName from product where id=:id");
-		return null;
+		List<SaleInfo> productName = currentSession.createQuery("from saleInfo order by saleQuantity desc").setMaxResults(5).list();
+		//List<SaleInfo> productName = currentSession.createQuery("from saleInfo").list();
+		return productName;
 	}
 	@Override
 	@Transactional

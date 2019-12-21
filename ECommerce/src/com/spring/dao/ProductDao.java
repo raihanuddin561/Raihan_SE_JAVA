@@ -15,7 +15,7 @@ public interface ProductDao {
 
 	void deleteProduct(int id);
 
-	String getMostSoldProduct();
+	List<SaleInfo> getMostSoldProduct();
 
 	void saleProduct(SaleInfo saleInfo);
 

@@ -17,7 +17,7 @@ public interface ProductService {
 
 	void deleteProduct(int id);
 
-	String getMostSoldProduct();
+	List<SaleInfo> getMostSoldProduct();
 
 	void saleProduct( SaleInfo saleInfo);
 

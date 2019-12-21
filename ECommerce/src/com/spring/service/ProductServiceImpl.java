@@ -34,7 +34,7 @@ public class ProductServiceImpl implements ProductService {
 		
 	}
 	@Override
-	public String getMostSoldProduct() {
+	public List<SaleInfo> getMostSoldProduct() {
 		// TODO Auto-generated method stub
 		return productDao.getMostSoldProduct();
 	}
