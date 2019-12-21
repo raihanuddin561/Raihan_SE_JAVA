@@ -35,34 +35,6 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
-	@Override
-	public String getProPic(String uid) {
-		// TODO Auto-generated method stub
-		return userDao.getProPic(uid);
-	}
-
-	@Override
-	public void updateProfiler(Users user) {
-		// TODO Auto-generated method stub
-		userDao.updateProfile(user);
-	}
-
-	@Override
-	public String getFirstName(String name) {
-		// TODO Auto-generated method stub
-		return userDao.getFirstName(name);
-	}
-
-	@Override
-	public List<Users> getProfilePics(String username) {
-		// TODO Auto-generated method stub
-		return userDao.getProfilePics(username);
-	}
-
-	@Override
-	public List<Users> getUserList(String firstname) {
-		// TODO Auto-generated method stub
-		return userDao.getUserList(firstname);
-	}
+	
 
 }

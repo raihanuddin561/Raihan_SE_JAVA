@@ -52,7 +52,7 @@ public class ProductDaoImpl implements ProductDao {
 	public List<SaleInfo> getMostSoldProduct() {
 		Session currentSession = sessionFactory.getCurrentSession();
 		List<SaleInfo> productName = currentSession.createQuery("from saleInfo order by saleQuantity desc").setMaxResults(5).list();
-		//List<SaleInfo> productName = currentSession.createQuery("from saleInfo").list();
+		//setMaxResults for show top 5
 		return productName;
 	}
 	@Override
